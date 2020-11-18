@@ -1,6 +1,6 @@
 package cn.codenest.redists.bloom;
 
-import cn.codenest.redists.entity.GoodsPrice;
+import cn.codenest.redists.entity.*;
 import cn.codenest.redists.mapper.GoodsPriceMapper;
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;

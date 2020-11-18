@@ -1,7 +1,7 @@
 package cn.codenest.redists.service.impl;
 
 import cn.codenest.redists.bloom.MyBloomFilter;
-import cn.codenest.redists.entity.GoodsPrice;
+import cn.codenest.redists.entity.*;
 import cn.codenest.redists.mapper.GoodsPriceMapper;
 import cn.codenest.redists.service.GoodsService;
 import cn.codenest.redists.util.TimeFunc;
