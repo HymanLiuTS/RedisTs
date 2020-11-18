@@ -1,6 +1,6 @@
 package cn.codenest.redists.service;
 
-import cn.codenest.mybatis.entity.GoodsPrice;
+import cn.codenest.redists.entity.*;
 
 import java.util.Date;
 import java.util.List;

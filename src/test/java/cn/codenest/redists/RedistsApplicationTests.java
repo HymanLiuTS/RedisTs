@@ -1,6 +1,6 @@
 package cn.codenest.redists;
 
-import cn.codenest.mybatis.entity.GoodsPrice;
+import cn.codenest.redists.entity.GoodsPrice;
 import cn.codenest.redists.service.impl.GoodsServiceImpl;
 import com.alibaba.fastjson.JSON;
 import org.junit.Test;

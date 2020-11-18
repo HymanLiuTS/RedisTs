@@ -7,5 +7,8 @@ package cn.codenest.redists.service;
  * @author : Hyman
  * @date : 2020-11-18 15:24
  **/
-public interface ResultTemplateSentinelService {
+public interface RedisTemplateSentinelService {
+
+    public void setStr(String key, String str);
+
 }

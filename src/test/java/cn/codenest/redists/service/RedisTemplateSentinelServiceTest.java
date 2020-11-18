@@ -8,25 +8,26 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * @author ：Hyman
- * @date ：Created in 2020/11/18 10:56
+ * @date ：Created in 2020/11/18 15:46
  * @description：
  * @modified By：
  * @version: $
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class JedisSentinelPoolServiceTest {
+public class RedisTemplateSentinelServiceTest {
+
     @Autowired
-    JedisSentinelPoolService jedisSentinelPoolService;
+    RedisTemplateSentinelService redisTemplateSentinelService;
+
 
     @Test
     public void setStrTest() throws InterruptedException {
         for (Integer i = 0; i < 100; i++) {
-            jedisSentinelPoolService.setStr("name1", i.toString());
+            redisTemplateSentinelService.setStr("name1", i.toString());
             Thread.sleep(2000);
             System.out.println("++++++++++++++++++++++++++++++" + i);
         }
 
     }
-
 }

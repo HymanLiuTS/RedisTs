@@ -82,7 +82,7 @@ public class JedisSentinelPoolServiceImpl implements JedisSentinelPoolService {
             }
             jedis.set(key, str);
             String name = jedis.get(key);
-            System.out.println("jedisSentinelPool-name：" + name);
+            System.out.println("JedisSentinelPoolService-name：" + name);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

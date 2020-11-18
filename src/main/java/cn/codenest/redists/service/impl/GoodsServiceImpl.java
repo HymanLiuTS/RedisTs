@@ -1,8 +1,8 @@
 package cn.codenest.redists.service.impl;
 
-import cn.codenest.mybatis.entity.GoodsPrice;
-import cn.codenest.mybatis.mapper.GoodsPriceMapper;
 import cn.codenest.redists.bloom.MyBloomFilter;
+import cn.codenest.redists.entity.GoodsPrice;
+import cn.codenest.redists.mapper.GoodsPriceMapper;
 import cn.codenest.redists.service.GoodsService;
 import cn.codenest.redists.util.TimeFunc;
 import cn.codenest.redists.util.ZipUtils;
@@ -11,8 +11,6 @@ import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.data.redis.serializer.RedisSerializer;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.*;
 
@@ -32,18 +30,8 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class GoodsServiceImpl implements GoodsService {
 
+    @Autowired
     private RedisTemplate redisTemplate;
-
-    @Autowired(required = false)
-    public void setRedisTemplate(RedisTemplate redisTemplate) {
-        RedisSerializer stringSerializer = new StringRedisSerializer();
-        redisTemplate.setKeySerializer(stringSerializer);
-        redisTemplate.setValueSerializer(stringSerializer);
-        redisTemplate.setHashKeySerializer(stringSerializer);
-        redisTemplate.setHashValueSerializer(stringSerializer);
-        redisTemplate.setEnableTransactionSupport(true);
-        this.redisTemplate = redisTemplate;
-    }
 
     @Autowired
     GoodsPriceMapper goodsPriceMapper;

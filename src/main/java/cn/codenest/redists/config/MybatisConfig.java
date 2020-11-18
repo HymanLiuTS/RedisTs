@@ -1,4 +1,4 @@
-package cn.codenest.redists.mybatis;
+package cn.codenest.redists.config;
 
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -14,7 +14,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan("cn.codenest.mybatis.mapper")
+@MapperScan("cn.codenest.redists.mapper")
 public class MybatisConfig {
     @Bean(name = "serviceDataSource")
     @ConfigurationProperties(prefix = "service.datasource")
