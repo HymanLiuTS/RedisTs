@@ -1,8 +1,9 @@
-package cn.codenest.redists.service;
+package cn.codenest.redists.service.impl;
 
 import cn.codenest.mybatis.entity.GoodsPrice;
 import cn.codenest.mybatis.mapper.GoodsPriceMapper;
 import cn.codenest.redists.bloom.MyBloomFilter;
+import cn.codenest.redists.service.GoodsService;
 import cn.codenest.redists.util.TimeFunc;
 import cn.codenest.redists.util.ZipUtils;
 import cn.hutool.core.convert.Convert;

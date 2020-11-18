@@ -1,8 +1,7 @@
 package cn.codenest.redists;
 
 import cn.codenest.mybatis.entity.GoodsPrice;
-import cn.codenest.redists.bloom.GoogleBloom;
-import cn.codenest.redists.service.GoodsServiceImpl;
+import cn.codenest.redists.service.impl.GoodsServiceImpl;
 import com.alibaba.fastjson.JSON;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -56,7 +55,7 @@ public class RedistsApplicationTests {
     @Test
     public void forName()  {
         try {
-            Class<?> c = ClassUtils.forName("cn.codenest.redists.service.GoodsServiceImpl", ContextLoader.class.getClassLoader());
+            Class<?> c = ClassUtils.forName("cn.codenest.redists.service.impl.GoodsServiceImpl", ContextLoader.class.getClassLoader());
             GoodsServiceImpl goodsServiceImpl= (GoodsServiceImpl)BeanUtils.instantiateClass(c);
             GoodsPrice goodsPrice=goodsServiceImpl.selectById(1L);
             System.out.println(JSON.toJSONString(goodsPrice));

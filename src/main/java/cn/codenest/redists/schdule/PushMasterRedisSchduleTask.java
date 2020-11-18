@@ -19,7 +19,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * @version: $
  */
 
-//@Component
+@Component
 public class PushMasterRedisSchduleTask implements SchduleTask {
 
     private RedisTemplate redisTemplate;
@@ -35,7 +35,7 @@ public class PushMasterRedisSchduleTask implements SchduleTask {
         this.redisTemplate = redisTemplate;
     }
 
-    @Scheduled(cron = "*/1 * * * * ?")
+    @Scheduled(cron = "*/30 * * * * ?")
     @Override
     public void execute() {
         System.out.println("定时任务开始......");
