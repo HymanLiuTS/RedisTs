@@ -20,19 +20,22 @@ spring:
   redis:
     ####redis单例配置#####################
     #database: ${SPRING_REDIS_DATABASE:3}
-    # Redis服务器地址
+    #  # Redis服务器地址
     #host: ${SPRING_REDIS_HOST:172.17.6.85}
-    # Redis服务器连接端口
+    #  # Redis服务器连接端口
     #port: ${SPRING_REDIS_PORT:6479}
-    # Redis服务器连接密码（默认为空）
+    #  # Redis服务器连接密码（默认为空）
     #password: ${SPRING_REDIS_PASSWORD:123}
     ####redis主从哨兵模式配置#####################
-    sentinel:
-      #主机名称
-      master: mymaster
-      #哨兵节点
-      nodes: 172.17.6.85:26479,172.17.6.85:26480,172.17.6.85:26480 # 哨兵的IP:Port列表
-
+    #sentinel:
+    #  #主机名称
+    #  master: mymaster
+    #  #哨兵节点
+    #  nodes: 172.17.6.85:26479,172.17.6.85:26480,172.17.6.85:26480 # 哨兵的IP:Port列表
+    ####redis集群模式配置#####################
+    cluster:
+      nodes: 147.92.72.151:6479,147.92.72.151:6480,147.92.72.151:6481,147.92.72.151:6482,147.92.72.151:6483,147.92.72.151:6484
+      password:
 info:
   version: @version@
 
